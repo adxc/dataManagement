@@ -12,7 +12,7 @@ module.exports = {
     extract: isProduction
   }),
   postcss:[
-    require('precss')()
+    require('precss')(),
   ],
   cssSourceMap: sourceMapEnabled,
   cacheBusting: config.dev.cacheBusting,

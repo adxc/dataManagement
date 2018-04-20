@@ -1,5 +1,14 @@
-@for $i from 12 to 32{
+@for $i from 12 to 34{
   .font-#{$i} {
     font-size: $i * 1px;
   }
+}
+.fc-blue {
+  color: #3498db;
+}
+.fc-green {
+  color: #1bb676;
+}
+.fc-green-1 {
+  color: #108161;
 }

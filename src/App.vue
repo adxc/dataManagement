@@ -31,7 +31,6 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   display: flex;
   flex-direction: column;
@@ -39,6 +38,12 @@ export default {
 }
 .g-bd{
   flex: 1 1 auto;
+  display: flex;
+}
+.g-mn{
+  flex: auto;
+  padding: 20px;
+  background: #dddddd;
   display: flex;
 }
 </style>
