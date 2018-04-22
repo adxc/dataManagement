@@ -1,6 +1,6 @@
 <template>
   <div class="g-sd">
-    <el-radio-group v-model="isCollapse" >
+    <el-radio-group v-model="isCollapse" @change="changed">
       <el-radio-button :label="!isCollapse" class="nav-switch"><img src="../assets/slider/sidebar-toggler.jpg" alt=""></el-radio-button>
     </el-radio-group>
     <el-menu default-active="2"
@@ -86,6 +86,7 @@
 </template>
 
 <script>
+import Bus from '../utils/bus'
 export default {
   name: 'z-slideBar',
   data () {
@@ -94,6 +95,9 @@ export default {
     }
   },
   methods: {
+    changed () {
+      Bus.$emit('isCollapse', this.isCollapse)
+    },
     handleOpen (key, keyPath) {
       console.log(key, keyPath)
     },

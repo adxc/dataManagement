@@ -37,7 +37,7 @@ export default {
   height: 100%;
 }
 .g-bd{
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   display: flex;
 }
 .g-mn{

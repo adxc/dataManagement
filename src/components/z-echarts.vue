@@ -18,19 +18,42 @@
         </div>
       </div>
     </div>
+    <el-button @click="changed"></el-button>
   </div>
 </template>
 
 <script>
+import Bus from '../utils/bus'
 export default {
   name: 'z-echarts',
+  data () {
+    return {
+      'isCollapse': ''
+    }
+  },
   mounted () {
     this.drawLine()
+    Bus.$on('isCollapse', isCollapse => {
+      this.isCollapse = isCollapse
+    })
+  },
+  watch: {
+    isCollapse () {
+      this.changed()
+    }
   },
   methods: {
+    changed () {
+      let myChart = this.$echarts.init(document.getElementById('myChart'))
+      console.log(myChart)
+      setTimeout(function () {
+        myChart.resize()
+      }, 1000)
+    },
     drawLine () {
       // 基于准备好的dom，初始化echarts实例
       let myChart = this.$echarts.init(document.getElementById('myChart'))
+      this.myChart = myChart
       // 绘制图表
       let options = {
         aria: {
