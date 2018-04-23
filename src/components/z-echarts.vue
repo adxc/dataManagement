@@ -1,5 +1,5 @@
 <template>
-  <div class="m-charts">
+  <div class="m-charts" id="mChart">
     <div id="myChart"></div>
     <div class="m-checkDate">
       <div class="u-date fc-green-1 active">今天</div>
@@ -40,14 +40,13 @@ export default {
   watch: {
     isCollapse () {
       this.changed()
+      this.parentListener()
     }
   },
   methods: {
     changed () {
-      let myChart = this.$echarts.init(document.getElementById('myChart'))
-      console.log(myChart)
-      setTimeout(function () {
-        myChart.resize()
+      setTimeout(() => {
+        this.myChart.resize()
       }, 1000)
     },
     drawLine () {

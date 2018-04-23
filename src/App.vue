@@ -37,13 +37,15 @@ export default {
   height: 100%;
 }
 .g-bd{
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   display: flex;
 }
 .g-mn{
   flex: auto;
+  flex-wrap: wrap;
   padding: 20px;
   background: #dddddd;
+  overflow: auto;
   display: flex;
 }
 </style>

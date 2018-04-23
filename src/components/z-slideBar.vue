@@ -112,6 +112,7 @@ export default {
   .g-sd{
     display: flex;
     flex-direction: column;
+    overflow: auto;
     .iconfont{
       margin-right: 5px;
       width: 24px;
