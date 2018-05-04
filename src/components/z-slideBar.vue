@@ -10,7 +10,8 @@
              background-color="#545c64"
              text-color="#fff"
              active-text-color="#ffd04b"
-             :collapse="isCollapse">
+             :collapse="isCollapse"
+             unique-opened='true'>
       <el-menu-item index="1" class="f-taj">
         <i class="iconfont icon-dashbord "></i>
         <span slot="title" class="nav-title">应用状况</span>

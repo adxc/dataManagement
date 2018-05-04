@@ -18,7 +18,6 @@
         </div>
       </div>
     </div>
-    <el-button @click="changed"></el-button>
   </div>
 </template>
 
@@ -40,7 +39,6 @@ export default {
   watch: {
     isCollapse () {
       this.changed()
-      this.parentListener()
     }
   },
   methods: {
